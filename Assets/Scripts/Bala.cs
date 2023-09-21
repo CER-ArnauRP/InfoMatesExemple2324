@@ -10,7 +10,6 @@ public class Bala : MonoBehaviour
     {
         
     }
-
     
     void Update()
     {
@@ -21,6 +20,14 @@ public class Bala : MonoBehaviour
         float limitSuperior = Camera.main.orthographicSize;
 
         if (transform.position.y >= limitSuperior) {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D objecteTocat)
+    {
+        if (objecteTocat.tag == "Numero")
+        {
             Destroy(gameObject);
         }
     }
