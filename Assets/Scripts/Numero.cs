@@ -35,6 +35,7 @@ public class Numero : MonoBehaviour
     {
         if (objecteTocat.tag == "Bala" || objecteTocat.tag == "NauJugador")
         {
+            GameObject.Find("NumText").GetComponent<NumText>().AfegirNum(_valorNumero);
             Destroy(gameObject);
         }
     }
